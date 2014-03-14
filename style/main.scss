@@ -4,7 +4,7 @@
 $field-width: 34px;
 $grid-spacing: 2px;
 $grid-row-cells: 1;
-$grid-rows: 20;
+$grid-rows: 21;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 $field-height: ($tile-size + $grid-spacing) * $grid-rows + $grid-spacing;
 $tile-border-radius: 3px;
