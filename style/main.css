@@ -145,7 +145,7 @@ hr {
 
 .game-container {
   margin-top: 40px;
-  margin-left: 240px;
+  margin-left: 304px;
   position: relative;
   padding: 2px;
   cursor: default;
@@ -155,7 +155,7 @@ hr {
   background: #bbada0;
   border-radius: 6px;
   width: 34px;
-  height: 514px;
+  height: 642px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -163,8 +163,8 @@ hr {
     display: none;
     position: absolute;
     top: 0;
-    left: -240px;
-    right: -240px;
+    left: -304px;
+    right: -304px;
     background: rgba(238, 228, 218, 0.5);
     z-index: 100;
     height: 100%;
@@ -299,6 +299,22 @@ hr {
   -webkit-transform: translate(0px, 480px);
   -moz-transform: translate(0px, 480px);
   transform: translate(0px, 480px); }
+.tile.tile-position-1-17 {
+  -webkit-transform: translate(0px, 512px);
+  -moz-transform: translate(0px, 512px);
+  transform: translate(0px, 512px); }
+.tile.tile-position-1-18 {
+  -webkit-transform: translate(0px, 544px);
+  -moz-transform: translate(0px, 544px);
+  transform: translate(0px, 544px); }
+.tile.tile-position-1-19 {
+  -webkit-transform: translate(0px, 576px);
+  -moz-transform: translate(0px, 576px);
+  transform: translate(0px, 576px); }
+.tile.tile-position-1-20 {
+  -webkit-transform: translate(0px, 608px);
+  -moz-transform: translate(0px, 608px);
+  transform: translate(0px, 608px); }
 
 .tile {
   position: absolute;
@@ -515,7 +531,7 @@ hr {
     margin-bottom: 10px; }
   .game-container {
     margin-top: 40px;
-    margin-left: 240px;
+    margin-left: 304px;
     position: relative;
     padding: 10px;
     cursor: default;
@@ -525,7 +541,7 @@ hr {
     background: #bbada0;
     border-radius: 6px;
     width: 280px;
-    height: 514px;
+    height: 642px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -533,8 +549,8 @@ hr {
       display: none;
       position: absolute;
       top: 0;
-      left: -240px;
-      right: -240px;
+      left: -304px;
+      right: -304px;
       background: rgba(238, 228, 218, 0.5);
       z-index: 100;
       height: 100%;
@@ -664,6 +680,22 @@ hr {
     -webkit-transform: translate(0px, 1012px);
     -moz-transform: translate(0px, 1012px);
     transform: translate(0px, 1012px); }
+  .tile.tile-position-1-17 {
+    -webkit-transform: translate(0px, 1080px);
+    -moz-transform: translate(0px, 1080px);
+    transform: translate(0px, 1080px); }
+  .tile.tile-position-1-18 {
+    -webkit-transform: translate(0px, 1147px);
+    -moz-transform: translate(0px, 1147px);
+    transform: translate(0px, 1147px); }
+  .tile.tile-position-1-19 {
+    -webkit-transform: translate(0px, 1215px);
+    -moz-transform: translate(0px, 1215px);
+    transform: translate(0px, 1215px); }
+  .tile.tile-position-1-20 {
+    -webkit-transform: translate(0px, 1282px);
+    -moz-transform: translate(0px, 1282px);
+    transform: translate(0px, 1282px); }
   .tile.tile-position-2-1 {
     -webkit-transform: translate(67px, 0px);
     -moz-transform: translate(67px, 0px);
@@ -728,6 +760,22 @@ hr {
     -webkit-transform: translate(67px, 1012px);
     -moz-transform: translate(67px, 1012px);
     transform: translate(67px, 1012px); }
+  .tile.tile-position-2-17 {
+    -webkit-transform: translate(67px, 1080px);
+    -moz-transform: translate(67px, 1080px);
+    transform: translate(67px, 1080px); }
+  .tile.tile-position-2-18 {
+    -webkit-transform: translate(67px, 1147px);
+    -moz-transform: translate(67px, 1147px);
+    transform: translate(67px, 1147px); }
+  .tile.tile-position-2-19 {
+    -webkit-transform: translate(67px, 1215px);
+    -moz-transform: translate(67px, 1215px);
+    transform: translate(67px, 1215px); }
+  .tile.tile-position-2-20 {
+    -webkit-transform: translate(67px, 1282px);
+    -moz-transform: translate(67px, 1282px);
+    transform: translate(67px, 1282px); }
   .tile.tile-position-3-1 {
     -webkit-transform: translate(135px, 0px);
     -moz-transform: translate(135px, 0px);
@@ -792,6 +840,22 @@ hr {
     -webkit-transform: translate(135px, 1012px);
     -moz-transform: translate(135px, 1012px);
     transform: translate(135px, 1012px); }
+  .tile.tile-position-3-17 {
+    -webkit-transform: translate(135px, 1080px);
+    -moz-transform: translate(135px, 1080px);
+    transform: translate(135px, 1080px); }
+  .tile.tile-position-3-18 {
+    -webkit-transform: translate(135px, 1147px);
+    -moz-transform: translate(135px, 1147px);
+    transform: translate(135px, 1147px); }
+  .tile.tile-position-3-19 {
+    -webkit-transform: translate(135px, 1215px);
+    -moz-transform: translate(135px, 1215px);
+    transform: translate(135px, 1215px); }
+  .tile.tile-position-3-20 {
+    -webkit-transform: translate(135px, 1282px);
+    -moz-transform: translate(135px, 1282px);
+    transform: translate(135px, 1282px); }
   .tile.tile-position-4-1 {
     -webkit-transform: translate(202px, 0px);
     -moz-transform: translate(202px, 0px);
@@ -856,6 +920,22 @@ hr {
     -webkit-transform: translate(202px, 1012px);
     -moz-transform: translate(202px, 1012px);
     transform: translate(202px, 1012px); }
+  .tile.tile-position-4-17 {
+    -webkit-transform: translate(202px, 1080px);
+    -moz-transform: translate(202px, 1080px);
+    transform: translate(202px, 1080px); }
+  .tile.tile-position-4-18 {
+    -webkit-transform: translate(202px, 1147px);
+    -moz-transform: translate(202px, 1147px);
+    transform: translate(202px, 1147px); }
+  .tile.tile-position-4-19 {
+    -webkit-transform: translate(202px, 1215px);
+    -moz-transform: translate(202px, 1215px);
+    transform: translate(202px, 1215px); }
+  .tile.tile-position-4-20 {
+    -webkit-transform: translate(202px, 1282px);
+    -moz-transform: translate(202px, 1282px);
+    transform: translate(202px, 1282px); }
   .game-container {
     margin-top: 20px; }
   .tile .tile-inner {
@@ -867,11 +947,11 @@ hr {
     margin-top: 90px !important; }
   .game-message .lower {
     margin-top: 30px !important; }
-
   .sharing > iframe, .sharing > span, .sharing > form {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px; } }
+
 .pp-donate button {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -881,7 +961,7 @@ hr {
   color: inherit;
   cursor: pointer;
   display: inline-block;
-  background: #8f7a66;
+  background: #8f7966;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
@@ -896,7 +976,7 @@ hr {
   position: relative;
   margin-left: 10px;
   display: inline-block;
-  background: #8f7a66;
+  background: #8f7966;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
