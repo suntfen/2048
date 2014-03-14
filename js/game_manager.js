@@ -42,8 +42,8 @@ GameManager.prototype.addStartTiles = function () {
 
 // Adds a tile in a random position
 GameManager.prototype.addRandomTile = function () {
-  if (this.grid.cellsAvailable()) {
-    var value = Math.random() < 0.9 ? 2 : 4;
+	if (this.grid.cellsAvailable()) {
+		var value = Math.random() < 0.9 ? 2 : 2;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
@@ -122,7 +122,7 @@ GameManager.prototype.move = function (direction) {
           // Update the score
           self.score += merged.value;
 
-          // The mighty 2048 tile
+        	// The mighty 2048 tile
           if (merged.value === 2048) self.won = true;
         } else {
           self.moveTile(tile, positions.farthest);
@@ -163,10 +163,8 @@ GameManager.prototype.getVector = function (direction) {
 GameManager.prototype.buildTraversals = function (vector) {
   var traversals = { x: [], y: [] };
 
-  for (var pos = 0; pos < this.size; pos++) {
-    traversals.x.push(pos);
-    traversals.y.push(pos);
-  }
+  for (var posx = 0; posx < this.size.x; posx++) traversals.x.push(posx);
+  for (var posy = 0; posy < this.size.y; posy++) traversals.y.push(posy);
 
   // Always traverse from the farthest cell in the chosen direction
   if (vector.x === 1) traversals.x = traversals.x.reverse();

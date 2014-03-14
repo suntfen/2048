@@ -1,11 +1,14 @@
 @import "helpers";
 @import "fonts/clear-sans.css";
 
-$field-width: 500px;
-$grid-spacing: 15px;
-$grid-row-cells: 4;
+$field-width: 34px;
+$grid-spacing: 2px;
+$grid-row-cells: 1;
+$grid-rows: 16;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+$field-height: ($tile-size + $grid-spacing) * $grid-rows + $grid-spacing;
 $tile-border-radius: 3px;
+$side-size: ($field-height - $field-width) / 2;
 
 $text-color: #776E65;
 $bright-text-color: #f9f6f2;
@@ -140,7 +143,7 @@ hr {
 }
 
 .container {
-  width: $field-width;
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -170,6 +173,7 @@ hr {
 @mixin game-field {
   .game-container {
     margin-top: 40px;
+    margin-left: $side-size;
     position: relative;
     padding: $grid-spacing;
 
@@ -181,7 +185,7 @@ hr {
     background: $game-container-background;
     border-radius: $tile-border-radius * 2;
     width: $field-width;
-    height: $field-width;
+    height: $field-height;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -191,11 +195,11 @@ hr {
 
       position: absolute;
       top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      left: -$side-size;
+      right: -$side-size;
       background: rgba($tile-color, .5);
       z-index: 100;
+      height: 100%;
 
       text-align: center;
 
@@ -205,8 +209,6 @@ hr {
         height: 60px;
         line-height: 60px;
         margin-top: 222px;
-        // height: $field-width;
-        // line-height: $field-width;
       }
 
       .lower {
@@ -282,7 +284,7 @@ hr {
 
     // Build position classes
     @for $x from 1 through $grid-row-cells {
-      @for $y from 1 through $grid-row-cells {
+      @for $y from 1 through $grid-rows {
         &.tile-position-#{$x}-#{$y} {
           $xPos: floor(($tile-size + $grid-spacing) * ($x - 1));
           $yPos: floor(($tile-size + $grid-spacing) * ($y - 1));
@@ -307,7 +309,7 @@ hr {
     font-weight: bold;
     z-index: 10;
 
-    font-size: 55px;
+    font-size: $tile-size / 2;
   }
 
   // Movement transition
@@ -368,14 +370,14 @@ hr {
 
       // Adjust font size for bigger numbers
       @if $power >= 100 and $power < 1000 {
-        font-size: 45px;
+        font-size: $tile-size / 3;
 
         // Media queries placed here to avoid carrying over the rest of the logic
         @include smaller(480px) {
           font-size: 25px;
         }
       } @else if $power >= 1000 {
-        font-size: 35px;
+        font-size: $tile-size / 4;
 
         @include smaller(480px) {
           font-size: 15px;
