@@ -47,7 +47,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 };
 
 HTMLActuator.prototype.addTile = function (tile) {
-  var text = " 甲乙丙丁戊己庚辛壬癸终天地人和〇";
+  var text = " 甲乙丙丁戊己庚辛壬癸终天地人和初〇";
   var self = this;
   var log2 = function (n) { var ret = 0; while (n > 1) ret++, n >>= 1; return ret; }
 
