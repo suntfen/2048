@@ -120,6 +120,7 @@ hr {
 
 .container {
   width: 590px;
+  max-width: 100%;
   margin: 0 auto; }
 
 @-webkit-keyframes fade-in {
@@ -144,8 +145,7 @@ hr {
     opacity: 1; } }
 
 .game-container {
-  margin-top: 40px;
-  margin-left: 280px;
+  margin: 40px auto 0;
   position: relative;
   padding: 2px;
   cursor: default;

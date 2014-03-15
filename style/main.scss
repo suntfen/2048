@@ -144,6 +144,7 @@ hr {
 
 .container {
   width: $field-height;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -172,8 +173,7 @@ hr {
 // Game field mixin used to render CSS at different width
 @mixin game-field {
   .game-container {
-    margin-top: 40px;
-    margin-left: $side-size;
+    margin: 40px auto 0;
     position: relative;
     padding: $grid-spacing;
 
