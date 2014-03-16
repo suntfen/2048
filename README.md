@@ -7,4 +7,4 @@ Modify:
 * Added ".AOE" keys work like "WASD", as I am a Dvorak layout user...
 * 移除了所有Tweet的链接，原因大概就是你看我这句话都没用英文写
 
-This _simplified 2048_ the Chinese version _终_ are published under MIT License.
+This _simplified 2048_, and the Chinese version _终_ are published under MIT License.
