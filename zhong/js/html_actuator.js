@@ -47,9 +47,7 @@ HTMLActuator.prototype.clearContainer = function (container) {
 };
 
 HTMLActuator.prototype.addTile = function (tile) {
-  var text = " 甲乙丙丁戊己庚辛壬癸终天地人和初〇";
   var self = this;
-  var log2 = function (n) { var ret = 0; while (n > 1) ret++, n >>= 1; return ret; }
 
   var wrapper   = document.createElement("div");
   var inner     = document.createElement("div");
@@ -64,7 +62,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = text[log2(tile.value)];
+  inner.textContent = I18N.tileText(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -106,35 +104,29 @@ HTMLActuator.prototype.positionClass = function (position) {
 };
 
 HTMLActuator.prototype.updateScore = function (score) {
-  var text = function (n) {
-    return ('' + n).split('').map(function (c) { return '〇一二三四五六七八九'[c]; }).join('');
-  };
   this.clearContainer(this.scoreContainer);
 
   var difference = score - this.score;
   this.score = score;
 
-  this.scoreContainer.textContent = text(this.score);
+  this.scoreContainer.textContent = I18N.numberToString(this.score);
 
   if (difference > 0) {
     var addition = document.createElement("div");
     addition.classList.add("score-addition");
-    addition.textContent = text(difference);
+    addition.textContent = I18N.numberToString(difference);
 
     this.scoreContainer.appendChild(addition);
   }
 };
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
-  var text = function (n) {
-    return ('' + n).split('').map(function (c) { return '〇一二三四五六七八九'[c]; }).join('');
-  };
-  this.bestContainer.textContent = text(bestScore);
+  this.bestContainer.textContent = I18N.numberToString(bestScore);
 };
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "胜利！" : "失败……";
+  var message = won ? I18N.won : I18N.lose;
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
