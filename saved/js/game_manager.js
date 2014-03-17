@@ -277,6 +277,7 @@ GameManager.prototype.fromJSON = function (loadData) {
     temp.grid.cells[pos.x][pos.y] = new Tile(pos, value);
   });
   this.saving.map(function (k) { self[k] = temp[k]; });
+  this.actuator.continue();
   this.actuate(true);
 }
 
