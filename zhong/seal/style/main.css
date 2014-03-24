@@ -230,10 +230,12 @@ hr {
   position: absolute;
   z-index: 2; }
 
+.tile .tile-inner {
+  padding: 11px; }
 .tile, .tile .tile-inner {
-  width: 59px;
-  height: 59px;
-  line-height: 69px; }
+  width: 85px;
+  height: 85px;
+  line-height: 85px; }
 .tile.tile-position-1-1 {
   -webkit-transform: translate(0px, 0px);
   -moz-transform: translate(0px, 0px);
@@ -362,7 +364,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-4 .tile-inner {
     background-image: url("../img/2.png");
@@ -370,7 +371,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-8 .tile-inner {
     background-image: url("../img/3.png");
@@ -378,7 +378,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-16 .tile-inner {
     background-image: url("../img/4.png");
@@ -386,7 +385,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-32 .tile-inner {
     background-image: url("../img/5.png");
@@ -394,7 +392,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-64 .tile-inner {
     background-image: url("../img/6.png");
@@ -402,7 +399,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-128 .tile-inner {
     background-image: url("../img/7.png");
@@ -410,7 +406,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-256 .tile-inner {
     background-image: url("../img/8.png");
@@ -418,7 +413,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-512 .tile-inner {
     background-image: url("../img/9.png");
@@ -426,7 +420,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-1024 .tile-inner {
     background-image: url("../img/a.png");
@@ -434,7 +427,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-2048 .tile-inner {
     background-image: url("../img/b.png");
@@ -442,7 +434,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-4096 .tile-inner {
     background-image: url("../img/c.png");
@@ -450,7 +441,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-8192 .tile-inner {
     background-image: url("../img/d.png");
@@ -458,7 +448,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-16384 .tile-inner {
     background-image: url("../img/e.png");
@@ -466,7 +455,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-32768 .tile-inner {
     background-image: url("../img/f.png");
@@ -474,7 +462,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-65536 .tile-inner {
     background-image: url("../img/g.png");
@@ -482,7 +469,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-131072 .tile-inner {
     background-image: url("../img/h.png");
@@ -490,7 +476,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-262144 .tile-inner {
     background-image: url("../img/i.png");
@@ -498,7 +483,6 @@ hr {
     background-size: contain;
     background-origin: content-box;
     background-position: center center;
-    padding: 24px;
     color: transparent; }
   .tile.tile-super .tile-inner {
     background-color: #3c3a32; }
@@ -726,10 +710,12 @@ hr {
   .tile-container {
     position: absolute;
     z-index: 2; }
+  .tile .tile-inner {
+    padding: 6px; }
   .tile, .tile .tile-inner {
-    width: 10px;
-    height: 10px;
-    line-height: 20px; }
+    width: 46px;
+    height: 46px;
+    line-height: 46px; }
   .tile.tile-position-1-1 {
     -webkit-transform: translate(0px, 0px);
     -moz-transform: translate(0px, 0px);

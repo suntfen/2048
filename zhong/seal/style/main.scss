@@ -6,7 +6,7 @@ $grid-spacing: 15px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
 $tile-border-radius: 3px;
-$tile-padding: 24px;
+$tile-padding: 0.1;
 
 $mobile-threshold: $field-width + 20px;
 
@@ -285,10 +285,15 @@ hr {
   }
 
   .tile {
+
+    .tile-inner {
+      padding: ceil($tile-size * $tile-padding);
+    }
+
     &, .tile-inner {
-      width: ceil($tile-size - 2 * $tile-padding);
-      height: ceil($tile-size - 2 * $tile-padding);
-      line-height: ceil($tile-size - 2 * $tile-padding + 10px);
+      width: ceil($tile-size * (1 - 2 * $tile-padding));
+      height: ceil($tile-size * (1 - 2 * $tile-padding));
+      line-height: ceil($tile-size * (1 - 2 * $tile-padding));
     }
 
     // Build position classes
@@ -395,7 +400,6 @@ hr {
       background-size: contain;
       background-origin: content-box;
       background-position: center center;
-      padding: $tile-padding;
       color: transparent;
     }
     $exponent: $exponent + 1;
