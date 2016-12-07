@@ -1,10 +1,21 @@
 ﻿var I18N = {
   'numberToString': function (num) {
   return ('' + num).split('')
-    .map(function (c) { return '〇一二三四五六七八九'[c]; }).join('');
+    .map(function (c) { return num; }).join('');
   },
   'tileText': function (value) {
-    var text = " 甲乙丙丁戊己庚辛壬癸终天地人和一二三";
+    var text = ['饼',
+    '实验',
+    '实验报告',
+    '组会',
+    '国内会议',
+    '国际会议',
+    '核心',
+    'EI',
+    'SCI',
+    'Nature',
+    '人生赢家！',
+    '学术造假'];
     var log2 = function (n) {
       var ret = 0;
       while (n > 1) ret++, n >>= 1; return ret;
