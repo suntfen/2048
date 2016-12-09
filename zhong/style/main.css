@@ -8,7 +8,7 @@ html, body {
   font-size: 18px; }
 
 body {
-  margin: 80px 0; }
+  margin: 65px 0; }
 
 .heading:after {
   content: "";
@@ -520,7 +520,7 @@ hr {
 
 @media screen and (max-width: 520px) {
   html, body {
-    font-size: 15px; }
+    font-size: 12px; }
   body {
     margin: 20px 0;
     padding: 0 20px; }
