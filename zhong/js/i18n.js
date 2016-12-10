@@ -2,8 +2,8 @@
   numberToString: function (num) {
   return num;
   },
-  tileText: 
-    [
+'tileText': function (value) {
+    var text = [
 	'饼',
     '实验',
     '实验报告',
@@ -14,9 +14,15 @@
     'EI',
     'SCI',
     'Nature',
-    '人生赢家',
+    '人生赢家！',
     '学术造假',
-	'身败名裂'],
+	'身败名裂'];
+    var log2 = function (n) {
+      var ret = 0;
+      while (n > 1) ret++, n >>= 1; return ret;
+    }
+    return text[log2(value-1)] || '';
+  },
   won: '知足吧，你已经成为人生赢家',
   lose: 
   [
