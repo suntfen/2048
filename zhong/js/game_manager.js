@@ -153,13 +153,6 @@ GameManager.prototype.move = function (direction) {
   });
 
   if (moved) {
-    self.grid.vals = [];
-    for(var i=0;i<this.size;i++){
-      for(var j=0;j<this.size;j++){
-        tile = self.grid.cellContent({ x: i, y: j });
-        self.grid.vals.push(tile ? tile.value : null);
-      }      
-    }
 	this.addRandomTile();
 
     if (!this.movesAvailable()) {
