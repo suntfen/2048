@@ -26,7 +26,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     if (metadata.terminated) {
       if (metadata.over) {
-        self.message(false); // You lose
+        self.message(false,grid.getMaxScore()); // You lose
       } else if (metadata.won) {
         self.message(true); // You win!
       }
@@ -62,7 +62,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = I18N.tileText(tile.value);
+  inner.textContent = I18N.tileText[Math.log2(tile.value)-1];
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -124,9 +124,9 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = I18N.numberToString(bestScore);
 };
 
-HTMLActuator.prototype.message = function (won) {
+HTMLActuator.prototype.message = function (won,score) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? I18N.won : I18N.lose;
+  var message = won ? (I18N.won|| "You win!") : (I18N.lose[Math.log2(score)-1]|| "Game over!");
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
