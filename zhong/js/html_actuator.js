@@ -26,7 +26,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     if (metadata.terminated) {
       if (metadata.over) {
-        self.message(false,grid.getMaxScore()); // You lose
+        self.message(false); // You lose
       } else if (metadata.won) {
         self.message(true); // You win!
       }
