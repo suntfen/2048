@@ -24,8 +24,8 @@
     return text[log2(value-1)] || '';
   },
   won: '知足吧，你已经成为人生赢家',
-  lose: 
-  [
+  lose: function (value) {
+    var text = [
     '可怜的娃',
     '睡在实验室可能就有结果了',
     '快去找老师',
@@ -38,6 +38,12 @@
 	'奖学金收割机',
 	'人生赢家,求抱大腿',
     '知足常乐，一朝回到解放前',
-	'重蹈覆辙，道德沦丧'],
+	'重蹈覆辙，道德沦丧'];
+    var log2 = function (n) {
+      var ret = 0;
+      while (n > 1) ret++, n >>= 1; return ret;
+    }
+    return text[log2(value-1)] || '';
+  },
 }
  
