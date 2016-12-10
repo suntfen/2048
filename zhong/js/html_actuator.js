@@ -26,7 +26,7 @@ HTMLActuator.prototype.actuate = function (grid, metadata) {
 
     if (metadata.terminated) {
       if (metadata.over) {
-        self.message(false); // You lose
+        self.message(false,256); // You lose
       } else if (metadata.won) {
         self.message(true); // You win!
       }
@@ -124,9 +124,9 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = I18N.numberToString(bestScore);
 };
 
-HTMLActuator.prototype.message = function (won) {
+HTMLActuator.prototype.message = function (won,score) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? I18N.won : I18N.lose;
+  var message = won ? (I18N.won|| "You win!") : (I18N.lose[Math.log2(score)-1]|| "Game over!");
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
