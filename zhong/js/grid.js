@@ -1,7 +1,14 @@
 function Grid(size) {
   this.size = size;
+  this.vals = [];
   this.cells = [];
   this.build();
+}
+
+Grid.prototype.getMaxScore = function (){
+  var maxval = 2;
+  for(i in this.vals){if(this.vals[i]&&this.vals[i]>maxval){maxval = this.vals[i];}}
+  return maxval;
 }
 
 // Build a grid of the specified size
