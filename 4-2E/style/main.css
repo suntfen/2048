@@ -335,7 +335,7 @@ hr {
       font-size: 25px; }
     @media screen and (max-width: 520px) {
       .tile.tile-8 .tile-inner {
-        font-size: 10px; } } 
+        font-size: 12px; } } 
   .tile.tile-16 .tile-inner {
     color: #f9f6f2;
     background: #f59563;
@@ -351,7 +351,7 @@ hr {
           font-size: 25px; }
     @media screen and (max-width: 520px) {
       .tile.tile-32 .tile-inner {
-        font-size: 10px; } } 
+        font-size: 12px; } } 
   .tile.tile-64 .tile-inner {
     color: #f9f6f2;
     background: #f65e3b;
@@ -359,7 +359,7 @@ hr {
          font-size: 25px; }
     @media screen and (max-width: 520px) {
       .tile.tile-64 .tile-inner {
-        font-size: 10px; } } 
+        font-size: 12px; } } 
   .tile.tile-128 .tile-inner {
     color: #f9f6f2;
     background: #edcf72;
@@ -391,7 +391,7 @@ hr {
           font-size: 25px; }
     @media screen and (max-width: 520px) {
       .tile.tile-1024 .tile-inner {
-        font-size: 10px; } } 
+        font-size: 12px; } } 
   .tile.tile-2048 .tile-inner {
     color: #f9f6f2;
     background: #edc22e;
@@ -406,7 +406,7 @@ hr {
     font-size: 25px; }
     @media screen and (max-width: 520px) {
       .tile.tile-super .tile-inner {
-        font-size: 10px; } }
+        font-size: 12px; } }
 
 @-webkit-keyframes appear {
   0% {
