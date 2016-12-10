@@ -62,7 +62,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = I18N.tileText[Math.log2(tile.value)-1];
+  inner.textContent = I18N.tileText(tile.value);
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -126,7 +126,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? (I18N.won|| "You win!") : (I18N.lose[Math.log2(256)-1]|| "Game over!");
+  var message = won ? I18N.won : I18N.lose;
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
