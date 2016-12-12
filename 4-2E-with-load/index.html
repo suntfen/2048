@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+	
+  <script src="js/config.js"></script>
+  <script src="js/jquery.js"></script>
+  <script>
+    document.write('<title>'+config_2048.title+'</title>');
+    document.write('<link href="style/main-'+config_2048.rank+'.css" rel="stylesheet" type="text/css">');
+  </script>
+  
+	
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+	
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+	
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title"><script>document.write(config_2048.title);</script></h1>
+      <p class="game-intro"><script>document.write(config_2048.intro);</script></p>
+    </div>
+    <div class="above-game">
+      <a class="restart-button">重新开始游戏</a>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">继续游戏</a>
+          <a class="retry-button">重新开始</a>
+        </div>
+      </div>
+      <div class="grid-container">
+      <script>
+        for(i=0;i<config_2048.rank;i++){
+          document.write('<div class="grid-row">');
+          for(j=0;j<config_2048.rank;j++){document.write('<div class="grid-cell"></div>');}
+          document.write('</div>');
+        }
+      </script>
+      </div>
+      <div class="tile-container"></div>
+    </div>
+    <hr>
+    <div class="extra">
+      <button id="easyMode_switcher_A">简单模式A</button>
+      <button id="easyMode_switcher_B">简单模式B</button>
+      <hr/>    
+      <p><strong class="important">Designed: </strong><script>document.write(config_2048.author);</script> <br/></p>
+      <p> <strong class="important">Note:</strong> This is a fork created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli</a> & <a href="http://bbs.125.la/thread-13930313-1-1.html" target="_blank">无限软件</a></p>
+    </div>
+  </div>
+  <script>
+    var MyEasyModeA     = false;
+    var MyValidChecker  = null;
+    $('#easyMode_switcher_A').click(function(){
+      if(!confirm('开启简单模式A后，最大方块值超过32后，新产生的方块值将不小于min(最小方块值, 最大方块值/16)\n即使重新开始游戏也是如此，除非刷新页面\n确认开启？')){return false;}
+      MyEasyModeA = true;
+      $(this).text('简单模式A已开启');
+      return false;
+    });
+    $('#easyMode_switcher_B').click(function(){
+      if(!confirm('开启简单模式B后，最大的方块和相邻方块相差倍数不超过4倍就可以合并')){return false;}
+      MyValidChecker = function(next, tile, self){
+        return next && !next.mergedFrom && (
+          Math.max(next.value, tile.value) == self.grid.getMaxScore() ?
+          (Math.max(next.value, tile.value) <= 4*Math.min(next.value, tile.value)) :
+          next.value == tile.value
+          );
+      };
+      $(this).text('简单模式B已开启');
+      return false;
+    });
+  </script>
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script>window.requestAnimationFrame(function(){var game = new GameManager(config_2048.rank, KeyboardInputManager, HTMLActuator, LocalStorageManager);});</script>
+</body>
+</html>
